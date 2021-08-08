@@ -22,7 +22,6 @@ const App = (state) => {
     const rovers = state.get('rovers')
     const roverPhotos= state.get('roverPhotos')
     const currentRover= rovers.find(rover => rover.name.toLowerCase() === state.get('currentRover')) || ''
-    console.log(currentRover)
 
     return `
         <header>${RoversList(rovers)}</header>
@@ -55,6 +54,7 @@ const RoversList = (rovers) => {
 
 const RoverTab = (rover) =>{
     const {name} = rover
+    
     return(`
     <div class="rover-tab" onclick="onHandlerRover('${name}')">
         <h3>${name}</h3>
@@ -99,6 +99,8 @@ const Photo = (photo) =>{
     </div>
     `)
 }
+
+// ------------------------------------------------------  EVENT HANDLERS
 
 const onHandlerRover = (rover) => {
     const roverName =  rover.toLowerCase()

@@ -38,6 +38,7 @@ app.get('/api/rovers/:rover', async (req, res) => {
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
 
+//Helpers
 const roversFilter = (data) => {
     const rovers = data.rovers.map(rover => {
         const {name, landing_date, launch_date, status,cameras, max_date, max_sol, total_photos} = rover
