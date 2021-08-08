@@ -9,6 +9,8 @@ body {
 
 header {
   /* header styles */
+  display: flex;
+  justify-content: center;
 }
 
 main {
@@ -19,16 +21,75 @@ main {
 footer {
   /* footer styles */
 }
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.photo {
+  height: 180px;
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+  margin-bottom: 1rem;
+}
+
+.rover-tab, .card-photo, .card {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  padding:0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 1rem;
+}
+
+.card-photo {
+  padding: 0;
+  width: 100%;
+}
+
+.card {
+  width: 100%;
+}
+
+.rover-tab {
+  height: 3rem;
+  width: 100%;
+}
+
+.rover-tab:hover {
+  box-shadow: 5px 5px 5px lightgray;
+  cursor: pointer;
+}
+
+.active {
+  color:green;
+}
+
+.complete {
+  color:blue;
+}
 
 /* -------------------  TABLET  --------------------- */
 @media (min-width: 768px) {
   /* use mobile */
+  .rover-tab {
+    width: 130px;
+  }
+  .card-photo {
+    width: 27%;
+  }
 }
 
 /* -------------------  DESKTOP  -------------------- */
 
-@media (min-width: 1224px) {
+@media (min-width: 1024px) {
   /* use mobile */
+  .card-photo {
+    width: 20%;
+  }
 }
 
 /* -------------------  LARGE SCREENS  -------------- */
